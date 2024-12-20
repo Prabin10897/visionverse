@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: clip;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #2c3e50;
+  }
+  .main-navbar {
+    margin: 0 auto;
+    width: 1440px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 64px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .main-navbar {
+      width: auto;
+      padding: 20px 20px;
+    }
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Oleo Script Swash Caps", serif;
+  }
+  
+  .navbar .logo img {
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 550;
+    font-size: 50 px;
+  }
+  
+  .navbar nav ul li a:hover {
+    color: rgb(7, 131, 232);
+  }
+  
+  .navbar .icons a {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #2c3e50;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .navbar .logo img {
+      margin-right: 0;
+    }
+    .navbar ul li a {
+      display: none;
+    }
+    .navbar .icons a {
+      margin-left: 0;
+    }
+  }
+
+
+.product-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card .product-image {
+    width: 100%;
+    height: 150px;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .logo img {
+    margin-right: 10px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header .icons {
+    display: flex;
+    gap: 15px;
+}
+
+header .icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.product-detail {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-container {
+    display: flex;
+    gap: 40px;
+}
+
+.product-image {
+    flex: 1;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.product-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    margin: 0 0 15px;
+    font-weight: bold;
+}
+
+.product-info .price {
+    font-size: 20px;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.product-info p {
+    line-height: 1.5;
+    color: #666;
+    font-size: 14px;
+}
+
+.product-options {
+    margin: 20px 0;
+}
+
+.product-options span {
+    font-weight: bold;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.product-options button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.product-options button:hover {
+    background-color: #f4f4f4;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.quantity-container button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity-container button:hover {
+    background-color: #f4f4f4;
+}
+
+.quantity-container input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.add-to-cart:hover {
+    background-color: #444;
+}
+
+.buy-now {
+    background-color: none;
+    border: 2px solid #000000;
+    color: #000000;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+.buy-now:hover {
+    background-color: #c7c3c3;
+}
+
+.sku {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+.product-details {
+    margin-top: 40px;
+}
+
+.product-details .details-toggle {
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-details .details-toggle h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.product-details .details-toggle i {
+    font-size: 16px;
+    color: #999;
+}
+
+.product-details .details-content {
+    display: none;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+}
+
+.main-footer {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 40px 64px;
+    background-color: #f8f8f8;
+  }
+  
+  .footer-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .footer-location {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Oleo Script Swash Caps", serif;
+    color: #2c3e50;
+  }
+  
+  .footer-logo img {
+    height: 32px;
+  }
+  
+  .footer-location p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social a {
+    font-size: 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-social a:hover {
+    color: #075bc7;
+  }
+  
+  .footer-navbar {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-navlist,
+  .footer-navdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-navlist a,
+  .footer-navdetails a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .footer-navlist a:hover,
+  .footer-navdetails a:hover {
+    color: #075bc7;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .main-footer {
+      padding: 20px 20px;
+    }
+  
+    .footer-details {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-navbar {
+      gap: 30px;
+    }
+  
+    .footer-navlist,
+    .footer-navdetails {
+      align-items: center;
+    }
+  
+    .footer-location {
+      align-items: center;
+    }
+  }

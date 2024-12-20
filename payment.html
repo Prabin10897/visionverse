@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <style>
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    
+    header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+
+
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .icons a {
+      color: #fff;
+      margin-left: 1rem;
+      font-size: 1.2rem;
+      transition: opacity 0.3s;
+    }
+
+    .icons a:hover {
+      opacity: 0.7;
+    }
+
+  
+    main {
+      padding: 3rem 1rem;
+    }
+
+    .payment-page {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-details {
+      margin-top: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .radio-group input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+
+    .order-summary {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .order-summary .item,
+    .order-summary .subtotal,
+    .order-summary .shipping,
+    .order-summary .total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .confirm-payment {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-top: 1.5rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .confirm-payment:hover {
+      background-color: #334155;
+    }
+
+    .main-footer {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 40px 64px;
+  background-color: #f8f8f8;
+}
+
+.footer-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-location {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Oleo Script Swash Caps", serif;
+  color: #2c3e50;
+}
+
+.footer-logo img {
+  height: 32px;
+}
+
+.footer-location p {
+  font-size: 16px;
+  color: #666;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  font-size: 20px;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #075bc7;
+}
+
+.footer-navbar {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-navlist,
+.footer-navdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-navlist a,
+.footer-navdetails a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-navlist a:hover,
+.footer-navdetails a:hover {
+  color: #075bc7;
+}
+
+@media screen and (max-width: 800px) {
+  .main-footer {
+    padding: 20px 20px;
+  }
+
+  .footer-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-navbar {
+    gap: 30px;
+  }
+
+  .footer-navlist,
+  .footer-navdetails {
+    align-items: center;
+  }
+
+  .footer-location {
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+  
+  <header class="main-navbar">
+    <div class="navbar">
+      <div class="logo">
+        <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+       
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="userdashboard.html"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  
+  <main>
+    <section class="payment-page">
+      <h1>Payment Page</h1>
+      <div class="payment-details">
+        <h2>Payment Details</h2>
+        <form action="tq.html">
+          <div class="form-group">
+            <label for="payment-method">Select Payment Method</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="payment-method" value="cash-on-delivery" checked>
+                Cash on Delivery
+              </label>
+            </div>
+          </div>
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="item">
+              <span>1 x Apple Vision Pro</span>
+              <span>Rs. 0.0</span>
+            </div>
+            <div class="subtotal">
+              <span>Subtotal</span>
+              <span>Rs. 0.0</span>
+            </div>
+            <div class="shipping">
+              <span>Shipping</span>
+              <span>Free</span>
+            </div>
+            <div class="total">
+              <span>Total</span>
+              <span>Rs. 0.0</span>
+            </div>
+          </div>
+          <button type="submit" class="confirm-payment">Confirm Payment</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-details">
+      <div class="footer-location">
+        <div class="footer-logo">
+          <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+        </div>
+        <p>Tripureshwor, Kathmandu</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-navbar">
+        <div class="footer-navlist">
+          <a href="index.html">Home</a>
+          <a href="product.html">Products</a>
+          <a href="explore.html">Explore</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-navdetails">
+          <a href="about.html">About Us</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="customer-service.html">Customer Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

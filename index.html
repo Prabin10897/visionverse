@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Verse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #e5e5e5;
+        }
+
+        
+
+        
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .hero h1 {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        
+        .products {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products h3 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 1em;
+        }
+
+        
+        .search-bar {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 200px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .main-footer {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 40px 64px;
+  background-color: #f8f8f8;
+}
+
+.footer-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-location {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Oleo Script Swash Caps", serif;
+  color: #2c3e50;
+}
+
+.footer-logo img {
+  height: 32px;
+}
+
+.footer-location p {
+  font-size: 16px;
+  color: #666;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  font-size: 20px;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #075bc7;
+}
+
+.footer-navbar {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-navlist,
+.footer-navdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-navlist a,
+.footer-navdetails a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-navlist a:hover,
+.footer-navdetails a:hover {
+  color: #075bc7;
+}
+
+@media screen and (max-width: 800px) {
+  .main-footer {
+    padding: 20px 20px;
+  }
+
+  .footer-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-navbar {
+    gap: 30px;
+  }
+
+  .footer-navlist,
+  .footer-navdetails {
+    align-items: center;
+  }
+
+  .footer-location {
+    align-items: center;
+  }
+}
+
+.product-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 20px;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.product-box {
+  display: inline-block;
+  width: 350px;
+  margin: 0 0px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #0056b3;
+}
+
+.scroll-buttons {
+  text-align: center;
+  margin: 20px;
+}
+
+.scroll-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.scroll-buttons button:hover {
+  background: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header class="main-navbar">
+        <div class="navbar">
+          <div class="logo">
+            <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+            
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="userdashboard.html"><i class="fas fa-user"></i></a>
+          </div>
+        </div>
+      </header>
+
+    <main>
+       
+        <section class="hero">
+            <h1>Best Seller</h1>
+            <h2>Apple Vision Pro</h2>
+            <a href="product_detail.html"><button class="btn">Order Now</button></a> <!-- Link to Order Page -->
+        </section>
+
+        
+      <section class="products">
+        <h3>Products Available</h3>
+        <div class="product-container" id="productContainer">
+          <div class="product-box">
+            <img src="./images/metaquest2.webp" alt="Product" />
+            <div class="product-name">Oculus Drift</div>
+            <div class="product-price">100000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
+          <div class="product-box">
+            <img src="./images/applepro.jpg" alt="Product" />
+            <div class="product-name">Vinture Pro</div>
+            <div class="product-price">100000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
+          <div class="product-box">
+            <img src="./images/metaquest3s.png" alt="Product" />
+            <div class="product-name">Mega Max</div>
+            <div class="product-price">100000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
+          <div class="product-box">
+            <img src="./images/metaquest2.webp" alt="Product" />
+            <div class="product-name">Tornado Plus</div>
+            <div class="product-price">100000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
+          <div class="product-box">
+            <img src="./images/applepro.jpg" alt="Product" />
+            <div class="product-name">Strig Zs</div>
+            <div class="product-price">100000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
+          <div class="product-box">
+            <img src="./images/metaquest3s.png" alt="Product" />
+            <div class="product-name">Oculus 3</div>
+            <div class="product-price">100000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
+         
+
+        </section>
+
+
+        
+        <div class="search-bar" id="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-details">
+          <div class="footer-location">
+            <div class="footer-logo">
+              <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+            </div>
+            <p>Tripureshwor, Kathmandu</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-navbar">
+            <div class="footer-navlist">
+              <a href="index.html">Home</a>
+              <a href="product.html">Products</a>
+              <a href="explore.html">Explore</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-navdetails">
+              <a href="about.html">About Us</a>
+              <a href="terms.html">Terms & Conditions</a>
+              <a href="customer-service.html">Customer Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script>
+        const container = document.getElementById("productContainer");
+  
+        function scrollLeft() {
+          container.scrollBy({ left: -300, behavior: "smooth" });
+        }
+  
+        function scrollRight() {
+          container.scrollBy({ left: 300, behavior: "smooth" });
+        }
+      </script>
+    
+</body>
+</html>

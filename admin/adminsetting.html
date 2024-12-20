@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Settings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #F2F2F2;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header .logo img {
+      height: 25px;
+    }
+
+    .header .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .header .icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .header .icons .icon {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .main-content {
+      padding: 30px;
+    }
+
+    .main-content h1 {
+      margin-bottom: 20px;
+    }
+
+    .layout {
+      display: flex;
+      gap: 20px;
+    }
+
+    .side-card {
+      flex: 1;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .side-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .side-card ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .side-card ul li {
+      margin-bottom: 10px;
+    }
+
+    .main-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 2;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .icons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .icons .icon {
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .icons .icon:hover {
+      color: #007bff;
+    }
+
+    .icons .icon {
+      margin: 0 10px;
+      color: #333;
+    }
+
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .auth-log {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .auth-log ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .auth-log ul li {
+      margin-bottom: 10px;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="images/vision_logo.png" alt="Vision Verse Logo"> <span>Vision Verse <sub>ADMIN</sub></span>
+    </div>
+    <div class="nav">
+      <a href="admin_dashboard.html">Dashboard</a>
+      <a href="admin_products.html">Products</a>
+      <a href="customers.html">Customers</a>
+      <a href="adminhistory.html">History</a>
+      <a href="admin_orders.html">Orders</a>
+    </div>
+    <div class="icons">
+      <span class="icon"><i class="fas fa-search" title="Search"></i></span>
+      <span class="icon"><i class="fas fa-bell" title="Notifications"></i></span>
+      <a  href="adminsetting.html"> <span class="icon"><i class="fas fa-gear" title="setting"></i></span></a>
+  </div>
+  </div>
+
+
+  <div class="main-content">
+    <h1>Settings: Dashboard / Settings</h1>
+
+    <div class="layout">
+      \
+      <div class="side-card">
+        <h3>List of Users</h3>
+        <ul>
+          <li>User 1</li>
+          <li>User 2</li>
+          <li>User 3</li>
+          <li>User 4</li>
+          <li>User 5</li>
+          <li>User 6</li>
+          <li>User 7</li>
+        </ul>
+      </div>
+
+      <!-- Main Cards -->
+      <div class="main-cards">
+        <div class="card" id="customer-reports">
+          <h3>Customers Reports</h3>
+          <!-- <img src="https://via.placeholder.com/50" alt="Icon"> -->
+          <div class="chart-container">
+            <canvas id="customerChart"></canvas>
+          </div>
+        </div>
+        <div class="card" id="user-auth">
+          <h3>User Authentication and Authorization</h3>
+          <!-- <img src="https://via.placeholder.com/50" alt="Icon"> -->
+          <div class="auth-log">
+            <h4>Recent Login Attempts</h4>
+            <ul>
+              <li>John Doe - Successful - 10:30 AM</li>
+              <li>Jane Smith - Failed - 10:45 AM</li>
+              <li>Michael Brown - Successful - 11:00 AM</li>
+              <li>Linda Green - Failed - 11:15 AM</li>
+              <li>Chris White - Successful - 11:30 AM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add event listeners to cards
+    document.getElementById('customer-reports').addEventListener('click', function() {
+      alert('Redirecting to Customer Reports...');
+      // Replace with actual navigation logic if needed
+    });
+
+    document.getElementById('user-auth').addEventListener('click', function() {
+      alert('Redirecting to User Authentication and Authorization settings...');
+      // Replace with actual navigation logic if needed
+    });
+
+    // Create a customer report chart
+    const ctx = document.getElementById('customerChart').getContext('2d');
+    const customerChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: 'Number of Customers',
+          data: [50, 60, 70, 80, 90, 100],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

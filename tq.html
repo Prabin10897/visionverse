@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Verse - Thankyou Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* CSS code*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+main {
+      padding: 3rem 1rem;
+    }
+
+    
+header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+ nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+.icons a {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #00bcd4;
+}
+
+    
+    .thankyou-page {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .thankyou-page h1 {
+      margin-bottom: 1rem;
+    }
+
+    .thankyou-page p {
+      margin-bottom: 2rem;
+    }
+
+    .continue-btn {
+      background-color: #333;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .continue-btn:hover {
+      background-color: #444;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-navbar">
+    <div class="navbar">
+      <div class="logo">
+        <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+        
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="userdashboard.html"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="thankyou-page">
+      <h1>Thank You!</h1>
+      <p>Payment done Successfully</p>
+      <p>Thank you for shopping with Vision Verse. Your order will be delivered to your doorstep.</p>
+      <button class="continue-btn">Continue to Shopping</button>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-details">
+      <div class="footer-location">
+        <div class="footer-logo">
+          <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+        </div>
+        <p>Tripureshwor, Kathmandu</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-navbar">
+        <div class="footer-navlist">
+          <a href="index.html">Home</a>
+          <a href="product.html">Products</a>
+          <a href="explore.html">Explore</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-navdetails">
+          <a href="about.html">About Us</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="customer-service.html">Customer Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  
+    document.querySelector('.continue-btn').addEventListener('click', () => {
+      
+      window.location.href = 'index.html'; 
+    });
+  </script>
+</body>
+</html>

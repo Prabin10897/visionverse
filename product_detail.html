@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Vision Verse</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header class="main-navbar">
+        <div class="navbar">
+          <div class="logo">
+            <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+            <!-- <span>Vision Verse</span> -->
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="userdashboard.html"><i class="fas fa-user"></i></a>
+          </div>
+        </div>
+      </header>
+    <main class="product-detail">
+        <section class="product-container">
+            <div class="product-image">
+                <img src="images/applepro.jpg" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1>Apple Vison Pro</h1>
+                <p class="price">Rs 500000 & Free Shipping</p>
+                <p>Apple Vision Pro seamlessly blends digital content with your physical space.
+                    So you can work, watch, relive memories, and connect in ways never before possible.
+                    The era of spatial computing is here.</p>
+                <div class="product-options">
+                    <span>Color:</span>
+                    <button class="color-option">Black</button>
+                    <button class="color-option">White</button>
+                </div>
+                <div class="quantity-container">
+                    <button id="decrease">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button id="increase">+</button>
+                </div>
+                <form action="cart.html"><button class="add-to-cart">Add to Cart</button></form>
+
+                <form action="checkout.html">
+                 <button class="buy-now" >Buy Now</button></form>
+                <p class="sku">SKU: N/A | Category: VR</p>
+            </div>
+        </section>
+
+        <section class="product-details">
+            <div class="details-toggle" id="description">
+                <h2>Description <i class="fas fa-plus"></i></h2>
+                <p class="details-content">Apple Vision Pro can transform any room into your own personal theater. Expand your movies, shows, and games to your perfect size and experience them in Spatial Audio. Apple Immersive Video puts you in the center of the action with mind‑blowing immersion. And with more pixels than a 4K TV for each eye, you can enjoy stunning content wherever you are — on a long flight or the couch at home.</p>
+            </div>
+            <div class="details-toggle" id="additional-info">
+                <h2>Additional Information <i class="fas fa-plus"></i></h2>
+                <p class="details-content">Apple Vision Pro gives you limitless space to get things done. Organize everything you need anywhere around you, in any way you like. Seamlessly bring in your Mac workflows using Mac Virtual Display. </p>
+            </div>
+            <div class="details-toggle" id="reviews">
+                <h2>Reviews (4.5) <i class="fas fa-plus"></i></h2>
+                <p class="details-content">Very Good Quality.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-details">
+          <div class="footer-location">
+            <div class="footer-logo">
+              <img src="./images/main-logo.png" alt="Vision Verse Logo" />
+            </div>
+            <p>Tripureshwor, Kathmandu</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-navbar">
+            <div class="footer-navlist">
+              <a href="index.html">Home</a>
+              <a href="product.html">Products</a>
+              <a href="explore.html">Explore</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-navdetails">
+              <a href="about.html">About Us</a>
+              <a href="terms.html">Terms & Conditions</a>
+              <a href="customer-service.html">Customer Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
